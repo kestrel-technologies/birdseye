@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Birdseye{% endblock %} · Skyward</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='skyward.css') }}">
+</head>
+<body>
+  <nav class="navbar navbar-sky">
+    <div class="container">
+      <a class="navbar-brand" href="{{ link('customer360.home', sid) if sid else '/' }}">
+        <img src="{{ url_for('static', filename='logo-skyward.svg') }}" alt="Skyward" height="22"> Birdseye
+      </a>
+      {% if sid %}
+      <form class="navbar-form navbar-right" action="/customer360" method="get">
+        <input type="hidden" name="sid" value="{{ sid }}">
+        <input class="form-control" name="q" placeholder="Search accounts" value="{{ q or '' }}">
+      </form>
+      {% endif %}
+    </div>
+  </nav>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>

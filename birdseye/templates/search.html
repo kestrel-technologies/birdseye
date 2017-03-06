@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Accounts{% endblock %}
+{% block content %}
+<h2>Accounts</h2>
+<table class="table table-striped">
+  <thead><tr><th>Account</th><th>Industry</th><th>Country</th></tr></thead>
+  <tbody>
+  {% for a in accounts %}
+    <tr>
+      <td><a href="{{ link('customer360.account', sid, account_id=a.Id) }}">{{ a.Name }}</a></td>
+      <td>{{ a.Industry or '' }}</td>
+      <td>{{ a.BillingCountry or '' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
