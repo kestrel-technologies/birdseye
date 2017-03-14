@@ -49,5 +49,6 @@ def open_cases(account_id):
 
 
 def search_accounts(term):
+    term = term.replace("'", "")
     return query("SELECT Id, Name, Industry, BillingCountry FROM Account WHERE Name LIKE '%%%s%%' "
                  "ORDER BY Name LIMIT 50" % term)
