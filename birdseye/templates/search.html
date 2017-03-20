@@ -2,6 +2,11 @@
 {% block title %}Accounts{% endblock %}
 {% block content %}
 <h2>Accounts</h2>
+{% if not q %}
+<p class="text-muted">Search for an account by name to open its customer 360 page.</p>
+{% elif not accounts %}
+<p class="text-muted">No accounts match "{{ q }}".</p>
+{% else %}
 <table class="table table-striped">
   <thead><tr><th>Account</th><th>Industry</th><th>Country</th></tr></thead>
   <tbody>
@@ -14,4 +19,5 @@
   {% endfor %}
   </tbody>
 </table>
+{% endif %}
 {% endblock %}
