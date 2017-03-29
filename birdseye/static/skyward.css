@@ -2,4 +2,8 @@
 body { padding-top: 0; color: #2f3426; background: #f7f7f2; }
 .navbar-sky { background: #6b7a2a; border: 0; border-radius: 0; margin-bottom: 24px; }
 .navbar-sky .navbar-brand { color: #fff; font-weight: 600; }
+.navbar-sky .navbar-brand img { display: inline-block; margin-right: 6px; vertical-align: -4px; }
+h2 small { color: #7d8560; }
+a { color: #556b2f; }
+.table > thead > tr > th { border-bottom-color: #c9cfae; }
 .sky-footer { margin: 40px auto 20px; font-size: 12px; color: #8a8f78; }
