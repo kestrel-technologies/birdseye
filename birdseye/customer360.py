@@ -26,4 +26,5 @@ def account(account_id):
     return render_template(
         "account.html", sid=None, account=acct, link=link,
         contacts=sf_client.contacts(account_id),
+        opportunities=sf_client.open_opportunities(account_id),
     )
