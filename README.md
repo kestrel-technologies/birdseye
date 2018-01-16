@@ -13,6 +13,9 @@ Sign in with your Salesforce account (the "Birdseye Legacy" connected app).
 | Account search | `/customer360?q=<name>` | Account name, industry, country |
 | Customer 360 | `/customer360/account/<id>` | Account, contacts, open opportunities, open cases |
 
+Every page link carries the session id (`?sid=...`) so a page can be bookmarked or handed to a
+colleague on the same team. Sessions last 30 days (`SESSION_TTL_DAYS`).
+
 ## Running locally
 
 ```sh
@@ -21,6 +24,7 @@ pip install -r requirements.txt
 FLASK_APP="birdseye:create_app()" flask run --port 8080
 ```
 
+Production runs `run.sh` (gunicorn) in the container built from `Dockerfile`.
 ## Tests
 
 ```sh

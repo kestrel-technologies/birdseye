@@ -14,7 +14,8 @@ def create_app(overrides=None):
     logging.basicConfig(level=getattr(logging, cfg.LOG_LEVEL, logging.INFO),
                         format="%(asctime)s %(name)s %(levelname)s %(message)s")
 
-    from . import auth, customer360
+    from . import auth, customer360, sessions
+    sessions.init_store(app.config.get("SESSION_DB", "birdseye-sessions.db"))
     app.register_blueprint(auth.bp)
     app.register_blueprint(customer360.bp)
 

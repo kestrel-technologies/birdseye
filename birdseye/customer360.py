@@ -45,4 +45,5 @@ def account(account_id):
         "account.html", sid=sess["sid"], account=acct, link=link,
         contacts=sf_client.contacts(account_id),
         opportunities=sf_client.open_opportunities(account_id),
+        cases=sf_client.open_cases(account_id),
     )
