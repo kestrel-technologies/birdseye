@@ -25,6 +25,15 @@
       {% endfor %}
       </tbody>
     </table>
+    <h3>Open cases</h3>
+    <table class="table table-condensed">
+      <thead><tr><th>#</th><th>Subject</th><th>Status</th><th>Priority</th></tr></thead>
+      <tbody>
+      {% for k in cases %}
+        <tr><td>{{ k.CaseNumber }}</td><td>{{ k.Subject }}</td><td>{{ k.Status }}</td><td>{{ k.Priority }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
   </div>
 </div>
 <p><a href="{{ link('customer360.home', sid) }}">&larr; Back to search</a></p>
