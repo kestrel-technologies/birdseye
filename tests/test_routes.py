@@ -36,3 +36,9 @@ def test_customer360_requires_session(client):
     assert resp.status_code == 302
     assert resp.headers["Location"].endswith("/login")
 
+
+def test_session_lookup(client):
+    sid = sessions.create_session("tok", "https://example.my.salesforce.com", ttl_days=1)
+    assert sessions.get_session(sid)["token"] == "tok"
+    sessions.invalidate(sid)
+    assert sessions.get_session(sid) is None
