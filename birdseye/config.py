@@ -1,7 +1,7 @@
 """Birdseye runtime configuration. Skyward Data, 2017."""
 
 SF_LOGIN_URL = "https://skywarddata.my.salesforce.com"
-SF_API_VERSION = "39.0"
+SF_API_VERSION = "44.0"
 
 # "Birdseye Legacy" connected app (user login)
 SF_CLIENT_ID = "3MVG9rZjd7MXFdLivndPygyiJHJhf1ADY6v5lk.lqZTxZpZ.aGtG2hLDmUVNEpkQQnM9R56y2Uu5vROIfW4zV"
