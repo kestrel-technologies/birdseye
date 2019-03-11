@@ -12,3 +12,4 @@
 - 2017-05-18 · Sign in with Salesforce enabled; users no longer share the team login.
 - 2018-01-16 · Sessions extended to 30 days at Sales Ops' request (fewer sign-ins on the road).
 - 2018-06-04 · Moved to the new Austin host; DNS `birdseye` updated.
+- 2019-03-11 · Salesforce API version bumped; no code changes needed.
