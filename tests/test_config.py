@@ -8,3 +8,7 @@ def test_login_url_is_my_domain():
 
 def test_callback_url_matches_route():
     assert config.OAUTH_CALLBACK_URL.endswith("/oauth/callback")
+
+
+def test_api_version_is_string():
+    assert isinstance(config.SF_API_VERSION, str)
