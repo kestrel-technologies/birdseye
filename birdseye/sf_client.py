@@ -1,5 +1,4 @@
 """Thin wrapper around simple-salesforce, logged in as the Birdseye integration user."""
-import os
 from urllib.parse import urlparse
 
 from . import config as cfg
@@ -17,8 +16,8 @@ def client():
     global _client
     if _client is None:
         from simple_salesforce import Salesforce
-        _client = Salesforce(username=os.environ["SF_USERNAME"], password=os.environ["SF_PASSWORD"],
-                             security_token=os.environ["SF_SECURITY_TOKEN"], domain=_domain(),
+        _client = Salesforce(username=cfg.SF_USERNAME, password=cfg.SF_PASSWORD,
+                             security_token=cfg.SF_SECURITY_TOKEN, domain=_domain(),
                              version=cfg.SF_API_VERSION)
     return _client
 
