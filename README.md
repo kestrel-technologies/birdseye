@@ -25,6 +25,11 @@ FLASK_APP="birdseye:create_app()" flask run --port 8080
 ```
 
 Production runs `run.sh` (gunicorn) in the container built from `Dockerfile`.
+## Configuration
+
+the API version, the integration user and the connected app's client id. Sales Ops rotates the
+integration login; see the `SKY_Legacy_Integration_Config` custom setting in Salesforce.
+
 ## Tests
 
 ```sh
