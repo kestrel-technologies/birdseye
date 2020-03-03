@@ -1,7 +1,7 @@
 """Birdseye runtime configuration. Skyward Data, 2017."""
 
 SF_LOGIN_URL = "https://skywarddata.my.salesforce.com"
-SF_API_VERSION = "46.0"
+SF_API_VERSION = "48.0"
 
 # Integration user (Sales Ops rotates; see SKY_Legacy_Integration_Config in Salesforce)
 SF_USERNAME = "svc.birdseye@skyward-data.example"
