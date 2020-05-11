@@ -6,6 +6,11 @@
 2. On the host: pull, restart the `birdseye` service, check `/healthz`.
 3. Sessions live in `birdseye-sessions.db` next to the app; a restart does not sign anyone out.
 
+## Integration login
+
+Birdseye reads Salesforce as `svc.birdseye`. The login, password and security token are in
+`birdseye/config.py`; the Salesforce side keeps the same login in the `SKY_Legacy_Integration_Config`
+custom setting for the Apex sync. Changing the password means updating both and redeploying.
 
 ## Operations log
 
@@ -15,3 +20,4 @@
 - 2018-06-04 · Moved to the new Austin host; DNS `birdseye` updated.
 - 2019-03-11 · Salesforce API version bumped; no code changes needed.
 - 2019-11-04 · Integration login moved from host environment variables into `config.py`.
+- 2020-05-11 · Runtime upgraded to Python 3.8 and Flask 1.1.
