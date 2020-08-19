@@ -1,4 +1,6 @@
 """Customer 360 views. Every page carries ?sid= so links can be shared between Sales Ops and Support."""
+import re
+
 from flask import Blueprint, abort, redirect, render_template, request, url_for
 
 from . import sf_client
@@ -38,6 +40,8 @@ def account(account_id):
     sess, resp = _session_or_login()
     if resp:
         return resp
+    if not re.fullmatch(r"[A-Za-z0-9]{15,18}", account_id):
+        abort(404)
     acct = sf_client.account(account_id)
     if acct is None:
         abort(404)
