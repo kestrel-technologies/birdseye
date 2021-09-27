@@ -36,3 +36,11 @@ integration login; see the `SKY_Legacy_Integration_Config` custom setting in Sal
 pip install pytest flake8
 flake8 birdseye tests && pytest -q
 ```
+
+## History
+
+| Year | |
+|---|---|
+| 2017 | Built by Skyward Sales Ops engineering (T. Lund) |
+| 2019 | Integration login moved into `config.py` |
+| 2021 | Skyward Data acquired by Kestrel; Birdseye kept running for Vantage Sales Ops |
