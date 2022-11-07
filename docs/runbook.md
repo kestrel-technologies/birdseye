@@ -17,3 +17,4 @@
 - 2019-11-04 · Integration login moved from host environment variables into `config.py`.
 - 2020-05-11 · Runtime upgraded to Python 3.8 and Flask 1.1.
 - 2021-04-12 · Skyward Data is now part of Kestrel. Birdseye stays up for Vantage Sales Ops.
+- 2022-11-07 · Repointed to the Vantage production org (`kestrelvantage-prod`); repository mirrored to Roost.

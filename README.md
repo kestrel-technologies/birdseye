@@ -27,6 +27,7 @@ FLASK_APP="birdseye:create_app()" flask run --port 8080
 Production runs `run.sh` (gunicorn) in the container built from `Dockerfile`.
 ## Configuration
 
+`birdseye/config.py` holds the Salesforce login URL (`kestrelvantage-prod` My Domain since 2022-11),
 the API version, the integration user and the connected app's client id. Sales Ops rotates the
 integration login; see the `SKY_Legacy_Integration_Config` custom setting in Salesforce.
 
@@ -44,3 +45,8 @@ flake8 birdseye tests && pytest -q
 | 2017 | Built by Skyward Sales Ops engineering (T. Lund) |
 | 2019 | Integration login moved into `config.py` |
 | 2021 | Skyward Data acquired by Kestrel; Birdseye kept running for Vantage Sales Ops |
+| 2022 | Repointed to the Vantage production org; repository mirrored to Roost |
+
+---
+
+Kestrel Technologies is a fictional company created for an educational workshop. Nothing in this repository is a real credential, person or product. Mirrored from Roost by `roost-mirror`; CL metadata is preserved in commit trailers (`Roost-CL:`, `Reviewed-by:`).
