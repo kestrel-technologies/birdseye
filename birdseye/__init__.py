@@ -29,6 +29,6 @@ def create_app(overrides=None):
 
     @app.route("/healthz")
     def healthz():
-        return "ok"
+        return {"status": "ok"}
 
     return app
