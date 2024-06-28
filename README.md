@@ -1,8 +1,13 @@
 # Birdseye
 
+> **DEPRECATED (2024-06-28).** Birdseye is scheduled for decommission (KSS-REV-0419, target Q3 2024).
+> Do not add features. Sales Ops and Support L2 continue to use it until a replacement is available.
+> Owner: Skyward Sales Ops (legacy). Questions: Vantage Business Systems.
+
 Birdseye is the Skyward customer-360 web app: one page per account with contacts, open
 opportunities and open cases, read from Salesforce through the `svc.birdseye` integration user.
 Sign in with your Salesforce account (the "Birdseye Legacy" connected app).
+
 <img src="birdseye/static/logo-skyward.svg" alt="Skyward" height="22" style="background:#6b7a2a;padding:4px">
 
 ## What it does
@@ -46,6 +51,7 @@ flake8 birdseye tests && pytest -q
 | 2019 | Integration login moved into `config.py` |
 | 2021 | Skyward Data acquired by Kestrel; Birdseye kept running for Vantage Sales Ops |
 | 2022 | Repointed to the Vantage production org; repository mirrored to Roost |
+| 2024 | Architecture review KSS-REV-0419; deprecated |
 
 ---
 

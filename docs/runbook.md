@@ -24,3 +24,4 @@ custom setting for the Apex sync. Changing the password means updating both and 
 - 2021-04-12 · Skyward Data is now part of Kestrel. Birdseye stays up for Vantage Sales Ops.
 - 2022-11-07 · Repointed to the Vantage production org (`kestrelvantage-prod`); repository mirrored to Roost.
 - 2023-11-02 · Annual app attestation submitted (C. Marsh).
+- 2024-06-28 · Deprecated after architecture review KSS-REV-0419; maintenance only.
