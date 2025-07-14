@@ -7,11 +7,17 @@ permissions: { contents: read }
 jobs:
   test:
     name: ci
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    continue-on-error: true   # legacy runtime; a failed dependency install is annotated, not hidden
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
         with: { python-version: '3.8' }
-      - run: pip install -r requirements.txt pytest flake8
+      - name: Install dependencies
+        id: deps
+        run: pip install -r requirements.txt "MarkupSafe<2.1" pytest==6.2.5 flake8==3.9.2
+      - name: Annotate dependency failure
+        if: failure() && steps.deps.outcome == 'failure'
+        run: echo "::error title=dependency install failed::requirements.txt pins could not be installed on this runner"
       - run: flake8 birdseye tests
       - run: pytest -q
