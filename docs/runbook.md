@@ -26,3 +26,4 @@ custom setting for the Apex sync. Changing the password means updating both and 
 - 2023-11-02 · Annual app attestation submitted (C. Marsh).
 - 2024-06-28 · Deprecated after architecture review KSS-REV-0419; maintenance only.
 - 2025-06-27 · C. Marsh has left; Sales Ops (P. Ramaswamy) keeps the host running.
+- 2026-10-09 · External networks now see `ops/maintenance.html` (INC-0471).

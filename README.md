@@ -30,6 +30,8 @@ FLASK_APP="birdseye:create_app()" flask run --port 8080
 ```
 
 Production runs `run.sh` (gunicorn) in the container built from `Dockerfile`.
+Since 2026-10-09 the external load balancer serves `ops/maintenance.html` to external networks.
+
 ## Configuration
 
 `birdseye/config.py` holds the Salesforce login URL (`kestrelvantage-prod` My Domain since 2022-11),
@@ -52,6 +54,7 @@ flake8 birdseye tests && pytest -q
 | 2021 | Skyward Data acquired by Kestrel; Birdseye kept running for Vantage Sales Ops |
 | 2022 | Repointed to the Vantage production org; repository mirrored to Roost |
 | 2024 | Architecture review KSS-REV-0419; deprecated |
+| 2026 | External access closed (INC-0471) |
 
 ---
 
